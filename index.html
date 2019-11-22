@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Drone</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Whizzy_Ellah <em>Hub</em></h1>
+
+      <div id="drone">
+        <img src="image/maindrone.png" class="drone_C" alt="" />
+        <img src="image/droneA.png" class="drone_A" alt="" />
+        <img src="image/droneB.png" class="drone_B" alt="" />
+      </div>
+    </div>
+    <script>
+      $("#wrapper").mousemove(function(e) {
+        var moveDrone = (e.pageX * -1) / 2 + 300;
+        var moveDrone2 = (e.pageY * -1) / 3 + 120;
+        $("#drone").css({
+          transform: "translate3d(" + moveDrone + "px, " + moveDrone2 + "px, 0)"
+        });
+      });
+    </script>
+  </body>
+</html>
